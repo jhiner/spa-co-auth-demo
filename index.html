@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Auth0-jQuery</title>
+    <meta charset="utf-8">
+    <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="http://cdn.auth0.com/js/auth0/8.6.0/auth0.min.js"></script>
+
+    <script src="auth0-variables.js"></script>
+    <script src="app.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div id="index_content">
+      <p>Here's a bunch of content in my domain. And oh look, there's a login form right there on my page.</p>
+    </div>
+    <p id="msg">To login, click Sign In below.</p>
+    <span id="error_msg"></span>
+    <div id="profile" style="display:none;">
+      <img alt="avatar" class="avatar" style="display:none;">
+      <p>Welcome <span class="nickname"></span></p>
+      <p>Access token: <span id="accessToken"></p>
+      <p>ID token: <span id="idToken"></p>
+      <button type="submit" class="btn-logout">Sign Out</button>
+    </div>
+    <div id="login-form">
+      Username: <input type="text" value="j@test.com" name="username" id="username"><br/>
+      Password: <input type="password" value="ABcd1234" name="password" id="password"><br/>
+      <button type="submit" id="btn-login">Sign In</button>
+    </div>
+  </body>
+</html>
