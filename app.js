@@ -103,9 +103,10 @@ $(document).ready(function() {
     req.setRequestHeader('Content-Type', 'application/json');
     var data = {
       client_id: AUTH0_CLIENT_ID,
-      credential_type: 'password',
+      credential_type: 'http://auth0.com/oauth/grant-type/password-realm',
       username: document.getElementById('username').value,
-      password: document.getElementById('password').value
+      password: document.getElementById('password').value,
+      realm:'Initial-Connection'
     }
     
     data = JSON.stringify(data);
